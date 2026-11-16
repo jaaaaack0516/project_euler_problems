@@ -1,0 +1,16 @@
+# Problem 2
+
+a = 1
+b = 2
+c = 0
+sum = 0
+
+for x in range(1,33):
+  if a%2 == 0:
+    sum = sum + a
+  print(a)
+  c = a + b
+  a = b
+  b = c
+
+print('Sum: ' + str(sum))
