@@ -1,11 +1,11 @@
-# Problem 2
+# Problem 2 (Find the sum of all even valued terms in the Fibonacci sequence that do not exceed four million)
 
 a = 1
 b = 2
 c = 0
 sum = 0
 
-for x in range(1,33):
+while a <= 4000000:
   if a%2 == 0:
     sum = sum + a
   print(a)
