@@ -1,4 +1,4 @@
-# Problem 9
+# Problem 9 (Finds the product (a*b*c) of the pythagorean triplet in which a + b + c = 1000)
 
 a = 0
 b = 0
