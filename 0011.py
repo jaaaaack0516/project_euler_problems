@@ -1,4 +1,4 @@
-# Problem 11
+# Problem 11 (Finds the greatest product of four adjacent numbers in the same direction in the grid below)
 
 grid = [
   [8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
@@ -23,59 +23,55 @@ grid = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ]
 
-min = 10000000000000000000000000000000000000000000000
+max = 0
 
 # Function for summing row
 def left_right(row, column):
   sum = grid[row][column] * grid[row][column+1] * grid[row][column+2] * grid[row][column+3]
-  # print(sum)
   return sum
 t = 0
 
 # Function for summing column
 def up_down(row, column):
   sum = grid[row][column] * grid[row+1][column] * grid[row+2][column] * grid[row+3][column]
-  # print(sum)
   return sum
 
 # Function for summing diagonal \
 def diagd(row, column):
   sum = grid[row][column] * grid[row+1][column+1] * grid[row+2][column+2] * grid[row+3][column+3]
-  # print(sum)
   return sum
 
 # Function for summing diagonal /
 def diagu(row, column):
   sum = grid[row][column] * grid[row+1][column-1] * grid[row+2][column-2] * grid[row+3][column-3]
-  # print(sum)
   return sum
 
 # Iterates through each number in the grid (minus the last 3 columns)
 for r in range(len(grid)):
   for c in range(r-3):
     t = left_right(r, c)
-    if t < min and t != 0:
-      min = t
+    if t  > max:
+      max = t
 
 # Iterates through each number in the grid (minus the last 3 rows)
 for r in range(len(grid)-3):
   for c in range(len(grid[r])):
     t = up_down(r, c)
-    if t < min and t != 0:
-      min = t
+    if t  > max:
+      max = t
 
 # Iterates through each number in the grid (minus the last 3 rows and columns)
 for r in range(len(grid)-3):
   for c in range(len(grid[r])-3):
     t = diagd(r, c)
-    if t < min and t != 0:
-      min = t
+    if t  > max:
+      max = t
 
 # Iterates through each number in the grid (minus the first 3 rows and first 3 columns)
 for r in range(len(grid)-3):
   for c in range(2, len(grid[r])):
     t = diagu(r, c)
-    if t < min and t != 0:
-      min = t
+    if t  > max:
+      max = t
 
-print(min)
+print(max)
