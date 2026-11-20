@@ -1,4 +1,4 @@
-# Problem 10
+# Problem 10 (Finds the sum of all primes below two million)
 
 import math
 sum = 0
