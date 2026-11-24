@@ -1,4 +1,4 @@
-# Problem 15
+# Problem 15 (Finds the amount of routes present in a 20x20 grid)
 r = int(input("Enter the amount of rows and columns (same number for both): "))
 n = r*2
 
