@@ -1,4 +1,4 @@
-# Problem 13
+# Problem 13 (Finds the first ten digits of the sum of each of the following numbers)
 
 nums = [
     37107287533902102798797998220837590246510135740250,
