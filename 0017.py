@@ -1,4 +1,4 @@
-# Problem 17
+# Problem 17 (Finds the amount of numbers used when writing out the numbers 1-1000)
 total = 0
 
 def th_letters(th):
