@@ -1,4 +1,4 @@
-# Problem 14
+# Problem 14 (Finds the starting number under one million that produces the longest collatz sequence)
 
 seq = []
 blegh = 0
